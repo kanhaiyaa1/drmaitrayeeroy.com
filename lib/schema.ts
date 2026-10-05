@@ -1,9 +1,12 @@
 import { publications } from "@/components/Publications";
-import { SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from "./site";
+import { SITE_DESCRIPTION, SITE_HOME, SITE_NAME, SITE_TITLE, SITE_URL } from "./site";
 
 // JSON-LD structured data, linked by @id. Facts only, taken from CLAUDE.md.
 // Facebook/Instagram/YouTube/X belong to the eLearningFRCPath brand, so they are
 // listed on the organization, not on the person.
+// Built to stay valid without upkeep: no counts, "years of experience" or modified dates.
+// Publications are generated from components/Publications.tsx, so a new paper added there
+// is picked up here automatically.
 
 const ID = {
   website: `${SITE_URL}/#website`,
@@ -11,7 +14,13 @@ const ID = {
   person: `${SITE_URL}/#person`,
   elearning: `${SITE_URL}/#elearningfrcpath`,
   lab: `${SITE_URL}/#maitri-diagnostic-lab`,
+  mmdu: `${SITE_URL}/#mmdu`,
+  photo: `${SITE_URL}/#photo`,
+  part1: `${SITE_URL}/#frcpath-part-1`,
+  part2: `${SITE_URL}/#frcpath-part-2`,
 };
+
+const PHOTO = `${SITE_URL}/dr-maitrayee-roy.webp`;
 
 // Publication dates are years (optionally followed by volume/pages, e.g. "2025;33(8):1759-66").
 function isoYear(date: string) {
@@ -24,7 +33,7 @@ export const schema = {
     {
       "@type": "WebSite",
       "@id": ID.website,
-      url: SITE_URL,
+      url: SITE_HOME,
       name: SITE_NAME,
       description: SITE_DESCRIPTION,
       inLanguage: "en-IN",
@@ -33,25 +42,42 @@ export const schema = {
     {
       "@type": "ProfilePage",
       "@id": ID.page,
-      url: SITE_URL,
+      url: SITE_HOME,
       name: SITE_TITLE,
+      description: SITE_DESCRIPTION,
       isPartOf: { "@id": ID.website },
       inLanguage: "en-IN",
+      about: { "@id": ID.person },
       mainEntity: { "@id": ID.person },
-      primaryImageOfPage: { "@type": "ImageObject", url: `${SITE_URL}/dr-maitrayee-roy.webp` },
+      primaryImageOfPage: { "@id": ID.photo },
+    },
+    {
+      "@type": "ImageObject",
+      "@id": ID.photo,
+      url: PHOTO,
+      contentUrl: PHOTO,
+      width: 709,
+      height: 819,
+      caption: "Prof. (Dr.) Maitrayee Roy, MD, FRCPath (Histopathology)",
     },
     {
       "@type": "Person",
       "@id": ID.person,
       name: SITE_NAME,
       honorificPrefix: "Prof. (Dr.)",
-      url: SITE_URL,
-      image: `${SITE_URL}/dr-maitrayee-roy.webp`,
-      email: "mailto:ms.maitrayee.roy@gmail.com",
+      url: SITE_HOME,
+      mainEntityOfPage: { "@id": ID.page },
+      image: { "@id": ID.photo },
+      email: "ms.maitrayee.roy@gmail.com",
       jobTitle: "Professor of Pathology",
       description:
         "Histopathologist, professor and FRCPath educator based in Ambala, Haryana. Professor of Pathology at MMDU, co-owner of Maitri Diagnostic Lab and co-founder of eLearningFRCPath.",
       hasOccupation: { "@type": "Occupation", name: "Histopathologist" },
+      award: [
+        "Best Senior Resident Award (NC Nayak Award, 2015-16), AIIMS New Delhi",
+        "Gold medal for first rank in the MD examination, 2013, KLE University",
+        "Best outgoing student, MBBS batch of 2009",
+      ],
       address: {
         "@type": "PostalAddress",
         addressLocality: "Ambala",
@@ -81,7 +107,9 @@ export const schema = {
         {
           "@type": "EducationalOccupationalCredential",
           name: "FRCPath (Histopathology), The Royal College of Pathologists, UK",
-          credentialCategory: "diploma",
+          credentialCategory: "fellowship",
+          dateCreated: "2019-02",
+          recognizedBy: { "@type": "Organization", name: "The Royal College of Pathologists (UK)" },
         },
       ],
       knowsAbout: [
@@ -100,7 +128,7 @@ export const schema = {
         { "@type": "Organization", name: "Association of Practicing Pathologists of Haryana" },
       ],
       worksFor: [
-        { "@type": "CollegeOrUniversity", name: "Maharishi Markandeshwar (Deemed to be) University, Mullana" },
+        { "@id": ID.mmdu },
         { "@id": ID.lab },
         { "@id": ID.elearning },
       ],
@@ -111,9 +139,27 @@ export const schema = {
       ],
     },
     {
+      "@type": "CollegeOrUniversity",
+      "@id": ID.mmdu,
+      name: "Maharishi Markandeshwar (Deemed to be) University",
+      url: "https://www.mmumullana.org/",
+      logo: `${SITE_URL}/mmdu-logo.webp`,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Mullana, Ambala",
+        addressRegion: "Haryana",
+        addressCountry: "IN",
+      },
+      employee: { "@id": ID.person },
+    },
+    {
       "@type": "DiagnosticLab",
       "@id": ID.lab,
       name: "Maitri Diagnostic Lab",
+      description:
+        "Diagnostic laboratory in Ambala City with a standalone histopathology section, offering histopathology, FNAC, hematology, immunohistochemistry and clinical pathology.",
+      foundingDate: "2016-08",
+      medicalSpecialty: "https://schema.org/Pathology",
       url: "https://maitridiagnosticlab.in/",
       logo: `${SITE_URL}/maitri-diagnostics-logo.png`,
       image: `${SITE_URL}/maitri-diagnostics-logo.png`,
@@ -125,7 +171,7 @@ export const schema = {
         addressCountry: "IN",
       },
       founder: { "@id": ID.person },
-      email: "mailto:ms.maitrayee.roy@gmail.com",
+      email: "ms.maitrayee.roy@gmail.com",
     },
     {
       "@type": "EducationalOrganization",
@@ -151,6 +197,27 @@ export const schema = {
         "https://www.youtube.com/@drmaitrayeeroyfrcpathdraks3532",
         "https://x.com/elearningf8199",
       ],
+    },
+    {
+      "@type": "Course",
+      "@id": ID.part1,
+      name: "FRCPath (Histopathology) Part 1 Coaching",
+      description: "Online mentorship for the FRCPath (Histopathology) Part 1 theory examination.",
+      url: "https://www.elearningfrcpath.com/",
+      provider: { "@id": ID.elearning },
+      inLanguage: "en",
+      hasCourseInstance: { "@type": "CourseInstance", courseMode: "online", instructor: { "@id": ID.person } },
+    },
+    {
+      "@type": "Course",
+      "@id": ID.part2,
+      name: "FRCPath (Histopathology) Part 2 Coaching",
+      description:
+        "Online mentorship for the FRCPath (Histopathology) Part 2 practical examination, covering short cases, long cases, OSPE, viva, frozen sections, cytology and applied histology.",
+      url: "https://www.elearningfrcpath.com/",
+      provider: { "@id": ID.elearning },
+      inLanguage: "en",
+      hasCourseInstance: { "@type": "CourseInstance", courseMode: "online", instructor: { "@id": ID.person } },
     },
     ...publications.map((p) => ({
       "@type": "ScholarlyArticle",

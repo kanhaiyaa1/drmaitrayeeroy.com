@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { OG_IMAGE, SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from "@/lib/site";
+import { OG_IMAGE, SITE_DESCRIPTION, SITE_HOME, SITE_NAME, SITE_TITLE, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,13 +13,17 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport: Viewport = {
+  themeColor: "#0a1f44",
+};
+
 // Favicon and apple-touch icon come from app/icon.png and app/apple-icon.png.
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: SITE_TITLE,
   description: SITE_DESCRIPTION,
   applicationName: SITE_NAME,
-  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  authors: [{ name: SITE_NAME, url: SITE_HOME }],
   creator: SITE_NAME,
   keywords: [
     "Dr Maitrayee Roy",
@@ -30,10 +34,11 @@ export const metadata: Metadata = {
     "FRCPath Histopathology",
     "histopathology",
     "oncopathology",
+    "Professor of Pathology MMDU Mullana",
     "Maitri Diagnostic Lab",
     "eLearningFRCPath",
   ],
-  alternates: { canonical: "/" },
+  alternates: { canonical: SITE_HOME },
   robots: {
     index: true,
     follow: true,
@@ -41,7 +46,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: "/",
+    url: SITE_HOME,
     siteName: SITE_NAME,
     locale: "en_IN",
     title: SITE_TITLE,
