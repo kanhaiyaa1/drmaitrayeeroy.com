@@ -48,7 +48,6 @@ export const schema = {
       url: SITE_URL,
       image: `${SITE_URL}/dr-maitrayee-roy.webp`,
       email: "mailto:ms.maitrayee.roy@gmail.com",
-      telephone: "+91-88006-83953",
       jobTitle: "Professor of Pathology",
       description:
         "Histopathologist, professor and FRCPath educator based in Ambala, Haryana. Professor of Pathology at MMDU, co-owner of Maitri Diagnostic Lab and co-founder of eLearningFRCPath.",
@@ -127,7 +126,6 @@ export const schema = {
       },
       founder: { "@id": ID.person },
       email: "mailto:ms.maitrayee.roy@gmail.com",
-      telephone: "+91-88006-83953",
     },
     {
       "@type": "EducationalOrganization",
