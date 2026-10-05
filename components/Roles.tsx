@@ -14,9 +14,14 @@ const roles = [
       "Supervises training and thesis work of postgraduate residents and PhD candidates",
       "Takes part in inter-departmental meetings",
     ],
-    logo: { src: "/mmdu-logo.jpg", alt: "Maharishi Markandeshwar (Deemed to be) University logo", width: 136, height: 121 } as {
-      src: string; alt: string; width: number; height: number; className?: string;
-    },
+    // Wide logo, so it is capped to the card width instead of a fixed height.
+    logo: {
+      src: "/mmdu-logo.webp",
+      alt: "Maharishi Markandeshwar (Deemed to be) University logo",
+      width: 600,
+      height: 133,
+      className: "h-auto max-h-20 w-auto max-w-full",
+    } as { src: string; alt: string; width: number; height: number; className?: string },
     address: undefined as string | undefined,
     footer: "Mullana, Ambala",
     href: undefined as string | undefined,
