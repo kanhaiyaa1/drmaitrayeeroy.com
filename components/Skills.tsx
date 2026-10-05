@@ -26,39 +26,39 @@ export default function Skills() {
   return (
     <section id="skills" aria-labelledby="skills-title" className="py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-6">
-        <SectionHeading id="skills-title" title="Skills & Awards" />
+        <SectionHeading id="skills-title" title="Awards & Skills" />
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-          <div>
-            <h3 className="mb-6 text-xl font-bold text-navy">Skills &amp; Expertise</h3>
-            <Reveal>
-          <ul className="flex flex-wrap gap-3">
-          {skills.map((s) => (
-            <li
-              key={s}
-              className="rounded-full border border-navy-100 bg-navy-50 px-5 py-2 text-sm font-semibold text-navy"
-            >
-              {s}
-            </li>
-          ))}
-          </ul>
-            </Reveal>
-          </div>
-
           <div>
             <h3 className="mb-6 text-xl font-bold text-navy">Awards &amp; Honours</h3>
             <ul className="space-y-4">
-          {awards.map((a, i) => (
-            <Reveal
-              as="li"
-              key={a.title}
-              delay={i * 100}
-              className="rounded-xl border border-navy-100 bg-navy-50 p-6 shadow-sm"
-            >
-              <h4 className="text-lg font-bold text-navy">{a.title}</h4>
-              <p className="mt-1 text-gray-700">{a.detail}</p>
-            </Reveal>
-          ))}
+              {awards.map((a, i) => (
+                <Reveal
+                  as="li"
+                  key={a.title}
+                  delay={i * 100}
+                  className="rounded-xl border border-navy-100 bg-navy-50 p-6 shadow-sm"
+                >
+                  <h4 className="text-lg font-bold text-navy">{a.title}</h4>
+                  <p className="mt-1 text-gray-700">{a.detail}</p>
+                </Reveal>
+              ))}
             </ul>
+          </div>
+
+          <div>
+            <h3 className="mb-6 text-xl font-bold text-navy">Skills &amp; Expertise</h3>
+            <Reveal>
+              <ul className="flex flex-wrap gap-3">
+                {skills.map((s) => (
+                  <li
+                    key={s}
+                    className="rounded-full border border-navy-100 bg-navy-50 px-5 py-2 text-sm font-semibold text-navy"
+                  >
+                    {s}
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
           </div>
         </div>
       </div>
