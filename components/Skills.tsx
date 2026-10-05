@@ -27,8 +27,10 @@ export default function Skills() {
     <section id="skills" aria-labelledby="skills-title" className="py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading id="skills-title" title="Skills & Awards" />
-        <h3 className="mb-6 text-xl font-bold text-navy">Skills &amp; Expertise</h3>
-        <Reveal>
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+          <div>
+            <h3 className="mb-6 text-xl font-bold text-navy">Skills &amp; Expertise</h3>
+            <Reveal>
           <ul className="flex flex-wrap gap-3">
           {skills.map((s) => (
             <li
@@ -39,10 +41,12 @@ export default function Skills() {
             </li>
           ))}
           </ul>
-        </Reveal>
+            </Reveal>
+          </div>
 
-        <h3 className="mb-6 mt-16 text-xl font-bold text-navy">Awards &amp; Honours</h3>
-        <ul className="grid gap-6 md:grid-cols-3">
+          <div>
+            <h3 className="mb-6 text-xl font-bold text-navy">Awards &amp; Honours</h3>
+            <ul className="space-y-4">
           {awards.map((a, i) => (
             <Reveal
               as="li"
@@ -54,7 +58,9 @@ export default function Skills() {
               <p className="mt-1 text-gray-700">{a.detail}</p>
             </Reveal>
           ))}
-        </ul>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   );
