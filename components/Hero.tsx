@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section className="bg-navy text-white">
@@ -33,14 +35,16 @@ export default function Hero() {
         </div>
 
         <div className="animate-fade-up mx-auto w-full max-w-xs [animation-delay:200ms]">
-          {/* TODO: photo placeholder. Replace with Image of /dr-maitrayee-roy.webp once the
-              client supplies a photo and confirms usage rights (same 716/841 ratio). */}
-          <div
-            role="img"
-            aria-label="Photo of Prof. (Dr.) Maitrayee Roy to be added"
-            className="relative flex aspect-[716/841] items-center justify-center overflow-hidden rounded-2xl border-4 border-white/20 bg-white/5"
-          >
-            <span className="text-sm text-navy-100">Photo coming soon</span>
+          {/* Full photo, uncropped. TODO: confirm usage rights with the client. */}
+          <div className="relative aspect-[709/819] overflow-hidden rounded-2xl border-4 border-white/20">
+            <Image
+              src="/dr-maitrayee-roy.webp"
+              alt="Prof. (Dr.) Maitrayee Roy, MD, FRCPath (Histopathology)"
+              fill
+              priority
+              sizes="(min-width: 768px) 360px, 320px"
+              className="object-cover object-top"
+            />
           </div>
         </div>
       </div>
