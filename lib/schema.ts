@@ -129,7 +129,7 @@ export const schema = {
       "@id": ID.elearning,
       name: "AM PATH E-Learning Private Limited",
       alternateName: "eLearningFRCPath",
-      url: "https://elearningfrcpath.com",
+      url: "https://www.elearningfrcpath.com/",
       logo: `${SITE_URL}/elearningfrcpath-logo.png`,
       description:
         "Online mentorship platform for FRCPath (Histopathology) Part 1 and Part 2, NEET-SS (Oncopathology) and INI-SS preparation.",
