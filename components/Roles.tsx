@@ -48,7 +48,6 @@ const roles = [
     period: "2019 – present",
     points: [
       "Online mentorship platform for FRCPath (Histopathology) Part 1 and Part 2, also NEET-SS (Oncopathology) and INI-SS preparation",
-      "Program conceptualised by Dr. Akshay Bali and developed jointly with Dr. Roy",
       "Teaches short cases, long cases (medical renal, medical liver, lymphoma), OSPE, viva, frozen sections, cytology and applied histology",
       "1000+ students mentored across FRCPath Part 1 and Part 2",
     ],

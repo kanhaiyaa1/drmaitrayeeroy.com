@@ -11,7 +11,7 @@ const milestones = [
   { year: "Nov 2016", text: "Joined Maharishi Markandeshwar (Deemed to be) University as Assistant Professor" },
   { year: "2018", text: "Cleared FRCPath Part 2" },
   { year: "Feb 2019", text: "FRCPath (Histopathology) awarded by the Royal College of Pathologists, London" },
-  { year: "2019", text: "Began FRCPath Part 1 and Part 2 coaching with Dr. Akshay Bali" },
+  { year: "2019", text: "Began FRCPath Part 1 and Part 2 coaching" },
   { year: "Feb 2022", text: "Promoted to Associate Professor" },
   { year: "Jun 2025", text: "Professor of Pathology, MMDU" },
   { year: "2025", text: "Paper in International Journal of Surgical Pathology (nephrectomy specimens)" },

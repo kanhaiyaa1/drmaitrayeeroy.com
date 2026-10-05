@@ -25,8 +25,7 @@ export default function About() {
           </p>
           <p>
             Since 2019 she has taught FRCPath Part 1 and Part 2 candidates
-            alongside Dr. Akshay Bali through eLearningFRCPath, mentoring over 1000
-            students. Her approach is simple: build confident, better diagnostic
+            through eLearningFRCPath, mentoring over 1000 students. Her approach is simple: build confident, better diagnostic
             pathologists, because better pathologists mean better patient care.
           </p>
         </Reveal>

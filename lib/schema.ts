@@ -139,9 +139,6 @@ export const schema = {
       description:
         "Online mentorship platform for FRCPath (Histopathology) Part 1 and Part 2, NEET-SS (Oncopathology) and INI-SS preparation.",
       founder: { "@id": ID.person },
-      // The company's own contact details (AM PATH E-Learning Pvt Ltd), not Dr. Roy's personal ones.
-      email: "mailto:aks23bali@gmail.com",
-      telephone: "+91-82954-18389",
       address: {
         "@type": "PostalAddress",
         streetAddress: "Ram Nagar, Baldev Nagar",

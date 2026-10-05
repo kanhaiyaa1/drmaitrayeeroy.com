@@ -1,5 +1,5 @@
 // Facebook, Instagram, YouTube and Twitter/X are the brand's (eLearningFRCPath)
-// accounts, shared with drakshay.com, not Dr. Roy's personal ones. LinkedIn,
+// accounts, not Dr. Roy's personal ones. LinkedIn,
 // ResearchGate and Google Scholar are her personal profiles. No other personal
 // social accounts were found, so none are listed.
 const socials = [
