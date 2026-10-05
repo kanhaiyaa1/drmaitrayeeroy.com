@@ -14,6 +14,8 @@ const skills = [
   "Hematology & Bone Marrow",
   "Laboratory & Quality Management",
   "Teaching & Thesis Mentoring",
+  "FRCPath Exam Coaching",
+  "Clinical Pathology",
 ];
 
 const awards = [
