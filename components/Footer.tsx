@@ -1,3 +1,5 @@
+import CurrentYear from "./CurrentYear";
+
 // Facebook, Instagram, YouTube and Twitter/X are the brand's (eLearningFRCPath)
 // accounts, not Dr. Roy's personal ones. LinkedIn,
 // ResearchGate and Google Scholar are her personal profiles. No other personal
@@ -110,7 +112,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col gap-2 border-t border-white/15 py-6 text-sm text-navy-100 sm:flex-row sm:items-center sm:justify-between">
-          <p>&copy; {new Date().getFullYear()} Prof. (Dr.) Maitrayee Roy. All rights reserved.</p>
+          <p>&copy; <CurrentYear buildYear={new Date().getFullYear()} /> Prof. (Dr.) Maitrayee Roy. All rights reserved.</p>
           <p>
             Designed &amp; Developed by:{" "}
             <a
