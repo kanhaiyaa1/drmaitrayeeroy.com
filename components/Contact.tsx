@@ -7,26 +7,23 @@ const iconPaths = {
   pin: "M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z",
 };
 
-// TODO CONFIRM: this is the shared business contact (same as drakshay.com). Pending
-// Dr. Roy's confirmation of which details she wants published. Her personal email and
-// phone from her CV must NOT be added without her explicit OK.
 const details = [
   {
     label: "Email",
     icon: iconPaths.mail,
-    value: "aks23bali@gmail.com",
-    href: "mailto:aks23bali@gmail.com",
+    value: "ms.maitrayee.roy@gmail.com",
+    href: "mailto:ms.maitrayee.roy@gmail.com",
   },
   {
     label: "Phone",
     icon: iconPaths.phone,
-    value: "+91 82954 18389",
-    href: "tel:+918295418389",
+    value: "+91 88006 83953",
+    href: "tel:+918800683953",
   },
   {
     label: "Address",
     icon: iconPaths.pin,
-    value: "AM PATH ELEARNING PVT LTD, Ram Nagar, Baldev Nagar, Ambala City, Haryana, India 134007",
+    value: "Maitri Diagnostic Lab, Barnala Road, Baldev Nagar, Delhi-Chandigarh Highway, beside Muthoot Finance, Ambala City, Haryana",
     href: undefined as string | undefined,
   },
 ];
@@ -72,7 +69,7 @@ export default function Contact() {
           <div className="mt-8 flex flex-col items-center gap-3 text-center">
             <p className="text-navy-100">Prefer WhatsApp?</p>
             <a
-              href="https://wa.me/918295418389"
+              href="https://wa.me/918800683953"
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-md border border-white/40 px-6 py-3 font-semibold text-white transition-colors hover:bg-white/10"

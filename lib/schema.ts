@@ -45,7 +45,8 @@ export const schema = {
       name: SITE_NAME,
       honorificPrefix: "Prof. (Dr.)",
       url: SITE_URL,
-      // Photo and personal email/phone intentionally omitted until the client confirms them.
+      email: "mailto:ms.maitrayee.roy@gmail.com",
+      telephone: "+91-88006-83953",
       jobTitle: "Professor of Pathology",
       description:
         "Histopathologist, professor and FRCPath educator based in Ambala, Haryana. Professor of Pathology at MMDU, co-owner of Maitri Diagnostic Lab and co-founder of eLearningFRCPath.",
@@ -123,6 +124,8 @@ export const schema = {
         addressCountry: "IN",
       },
       founder: { "@id": ID.person },
+      email: "mailto:ms.maitrayee.roy@gmail.com",
+      telephone: "+91-88006-83953",
     },
     {
       "@type": "EducationalOrganization",
@@ -134,7 +137,7 @@ export const schema = {
       description:
         "Online mentorship platform for FRCPath (Histopathology) Part 1 and Part 2, NEET-SS (Oncopathology) and INI-SS preparation.",
       founder: { "@id": ID.person },
-      // TODO CONFIRM: shared business contact (same as drakshay.com), pending Dr. Roy's confirmation.
+      // The company's own contact details (AM PATH E-Learning Pvt Ltd), not Dr. Roy's personal ones.
       email: "mailto:aks23bali@gmail.com",
       telephone: "+91-82954-18389",
       address: {

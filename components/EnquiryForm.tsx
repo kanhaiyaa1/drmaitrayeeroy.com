@@ -3,8 +3,9 @@
 import { useState, type FormEvent } from "react";
 
 // Web3Forms access key. It is public by design and safe in client-side code, but it is
-// tied to the receiving inbox. TODO: create a key for drmaitrayeeroy.com at web3forms.com
-// using the inbox the client confirms, then paste it here. Until then submissions fail.
+// tied to the receiving inbox. TODO: generate the key at web3forms.com using
+// ms.maitrayee.roy@gmail.com so enquiries go to Dr. Roy, then paste it here.
+// Until then submissions fail.
 const WEB3FORMS_ACCESS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY";
 
 type Status = "idle" | "loading" | "success" | "error";
