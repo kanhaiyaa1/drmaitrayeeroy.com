@@ -73,13 +73,15 @@ export default function Roles() {
               className="flex flex-col rounded-xl border border-gray-100 bg-[#d6e9f7] p-8 shadow-md hover:-translate-y-1 hover:shadow-xl"
             >
               {r.logo && (
-                <Image
-                  src={r.logo.src}
-                  alt={r.logo.alt}
-                  width={r.logo.width}
-                  height={r.logo.height}
-                  className={`mb-6 self-start rounded-md ${r.logo.className ?? "h-20 w-auto"}`}
-                />
+                <div className="mb-6 flex h-20 items-center">
+                  <Image
+                    src={r.logo.src}
+                    alt={r.logo.alt}
+                    width={r.logo.width}
+                    height={r.logo.height}
+                    className={`rounded-md ${r.logo.className ?? "h-20 w-auto"}`}
+                  />
+                </div>
               )}
               <p className="text-sm font-semibold text-navy-500">{r.period}</p>
               <h3 className="mt-2 text-xl font-bold text-navy">{r.title}</h3>
