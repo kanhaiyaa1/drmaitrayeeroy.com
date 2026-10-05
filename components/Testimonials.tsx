@@ -1,23 +1,23 @@
 import SectionHeading from "./SectionHeading";
 
-// TODO: replace each placeholder with the EXACT wording of the Facebook review as published at
-// https://www.elearningfrcpath.com/dr-maitrayee-roy and /md-frcpath-dr-maitrayee-roy.
-// Never paraphrase inside the quotation marks. Short excerpts are fine.
+// Wording copied verbatim from https://www.elearningfrcpath.com/md-frcpath-dr-maitrayee-roy
+// ("What Students Say About Dr Maitrayee Roy"). Do not edit the quotes. Note that
+// /dr-maitrayee-roy words Neeti Goyal's and Raman Johal Sivia's reviews slightly differently.
 const quotes = [
   {
-    text: "[Review text to be pasted from the source page]",
+    text: "The classes she takes are so good, it's like revision and so easy to understand every single concept in pathology. The approach to the exam questions was easier, because of Maitrayee Ma'am's classes.",
     name: "Neeti Goyal",
   },
   {
-    text: "[Review text to be pasted from the source page]",
+    text: "I have attended Dr Maitrayee Roy's FRCPath preparatory sessions and I would highly recommend them for FRCPath Part 2 preparation. It was an excellent course with recorded lectures and notes that covered all the required elements of the exam.",
     name: "Raman Johal Sivia",
   },
   {
-    text: "[Review text to be pasted from the source page]",
+    text: "I passed my Part 1 and I would like to extend my heartfelt thanks to Dr Maitrayee. Your classes and PPTs are gold for this exam. You teach really well and your notes are superb for revision.",
     name: "Aeman Khalid",
   },
   {
-    text: "[Review text to be pasted from the source page]",
+    text: "Dr Maitrayee's lectures and course materials were invaluable for my exam preparation. They helped me a great deal in clearing FRCPath Part 2 in the first attempt.",
     name: "Niyatha Balakrishnan",
   },
 ];
@@ -64,7 +64,7 @@ export default function Testimonials() {
                   <span>
                     <span className="block font-semibold text-navy">{q.name}</span>
                     <span className="block text-sm text-gray-500">
-                      eLearningFRCPath student &middot; Facebook review
+                      eLearningFRCPath student
                     </span>
                   </span>
                 </figcaption>
