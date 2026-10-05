@@ -14,8 +14,14 @@ const roles = [
       "Supervises training and thesis work of postgraduate residents and PhD candidates",
       "Takes part in inter-departmental meetings",
     ],
-    // TODO: add the MMDU logo once the client supplies it.
-    logo: undefined as { src: string; alt: string; width: number; height: number } | undefined,
+    // Wide logo, so it is capped to the card width instead of a fixed height.
+    logo: {
+      src: "/mmdu-logo.webp",
+      alt: "Maharishi Markandeshwar (Deemed to be) University logo",
+      width: 600,
+      height: 133,
+      className: "h-auto max-h-20 w-auto max-w-full",
+    } as { src: string; alt: string; width: number; height: number; className?: string },
     address: undefined as string | undefined,
     footer: "Mullana, Ambala",
     href: undefined as string | undefined,
@@ -73,7 +79,7 @@ export default function Roles() {
                   alt={r.logo.alt}
                   width={r.logo.width}
                   height={r.logo.height}
-                  className="mb-6 h-20 w-auto self-start rounded-md"
+                  className={`mb-6 self-start rounded-md ${r.logo.className ?? "h-20 w-auto"}`}
                 />
               )}
               <p className="text-sm font-semibold text-navy-500">{r.period}</p>
