@@ -3,7 +3,6 @@ import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Timeline from "@/components/Timeline";
 import Roles from "@/components/Roles";
-import Awards from "@/components/Awards";
 import Publications from "@/components/Publications";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
@@ -23,7 +22,6 @@ export default function Home() {
         <Skills />
         <Timeline />
         <Roles />
-        <Awards />
         <Publications />
         <Testimonials />
         <Contact />
