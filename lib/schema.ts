@@ -38,6 +38,7 @@ export const schema = {
       isPartOf: { "@id": ID.website },
       inLanguage: "en-IN",
       mainEntity: { "@id": ID.person },
+      primaryImageOfPage: { "@type": "ImageObject", url: `${SITE_URL}/dr-maitrayee-roy.webp` },
     },
     {
       "@type": "Person",
@@ -45,6 +46,7 @@ export const schema = {
       name: SITE_NAME,
       honorificPrefix: "Prof. (Dr.)",
       url: SITE_URL,
+      image: `${SITE_URL}/dr-maitrayee-roy.webp`,
       email: "mailto:ms.maitrayee.roy@gmail.com",
       telephone: "+91-88006-83953",
       jobTitle: "Professor of Pathology",
