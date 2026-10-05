@@ -14,7 +14,6 @@ const milestones = [
   { year: "2019", text: "Began FRCPath Part 1 and Part 2 coaching" },
   { year: "Feb 2022", text: "Promoted to Associate Professor" },
   { year: "Jun 2025", text: "Professor of Pathology, MMDU" },
-  { year: "2025", text: "Paper in International Journal of Surgical Pathology (nephrectomy specimens)" },
 ];
 
 export default function Timeline() {
